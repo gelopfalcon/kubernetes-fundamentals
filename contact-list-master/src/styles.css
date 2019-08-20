@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url("/assets/font/Open_Sans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("/assets/font/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("/assets/font/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+body {
+  background-color: #41a07c;
+  font-family: OpenSans-Light;
+}
+
+.header {
+  padding: 5% 0;
+}
+
+h1 {
+  color: white;
+}
+
+.header img {
+  height: 65px;
+}
+
+.delete-icon-wrapper {
+  font-size: 14px;
+  color: red;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.go-to-icon-wrapper {
+  font-size: 14px;
+  color: #35608e;  
+  padding: 10px 0;
+  cursor: pointer;  
+}
+
+.go-to-icon-wrapper i {  
+  font-size: 18px;  
+}

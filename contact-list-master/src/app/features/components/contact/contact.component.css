@@ -1,0 +1,27 @@
+.card {
+  border: none;
+}
+
+.left-contact-bar {
+  background-color: seagreen;
+}
+
+.left-contact-bar i {
+  color: white;
+  position: relative;
+  right: 5px;
+  top: 5px;
+}
+
+.id {
+  color: #32bf8a;
+  margin: 8px 0 0;
+  font-family: OpenSans-Bold;
+}
+
+.name, .lastname {
+  margin: 0px;
+}
+.contact-options {
+  padding-left: 15px;
+}

@@ -1,0 +1,48 @@
+<div class="container contact-details">
+  <div class="header row">
+    <div class="col-9">      
+      <h1>
+        <img src="assets/img/ic-silverback.png"/>
+        CONTACT DETAILS
+      </h1>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class='card border-0' *ngIf='contact'>
+      <div class='card-header'>
+        <i class="fas fa-user"></i>
+        <p>ID:<span>{{contact.id}}</span></p>
+      </div>
+
+      <div class='card-body'>
+        <div class='row'>
+            <div class="col-7"></div>
+            <div class="delete-icon-wrapper col-2 pull-right" (click)='deleteContact(contact.id)'>
+              <i class="far fa-trash-alt delete-icon"></i> DELETE CONTACT
+            </div>
+            <div [routerLink]="['/contacts']" class="go-to-icon-wrapper col-3 pull-right">
+                <i class="far fa-arrow-alt-circle-left show-icon"></i> GO TO CONTACT LIST
+            </div>                
+        </div>
+        <div class='row'>
+          <div class='col-4'>
+            <p class="field-name">NAME:</p>
+            <p class="field-value">{{ contact.name | firstUpperCaseLetter }} {{ contact.lastName | firstUpperCaseLetter }}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-4'>
+            <p class="field-name">PHONE:</p>
+            <p class="field-value">{{contact.phone}}</p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-4'>
+            <p class="field-name">EMAIL:</p>
+            <p class="field-value">{{contact.email}}</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+</div>

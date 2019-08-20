@@ -1,0 +1,158 @@
+<div class="container contact-details">
+  <div class="header row">
+    <div class="col-9">      
+      <h1>
+        <img src="assets/img/ic-silverback.png"/>
+        ADD CONTACT
+      </h1>
+    </div>
+  </div>
+  <form [formGroup]="contactForm"
+        (ngSubmit)="save()">
+
+    <div class='row form-group'>
+      <div class='col-7'>
+        <label class="field-name">NAME:</label>
+        <input class="form-control"
+               id="name"                  
+               type="text"
+               placeholder="Type your first name"
+               formControlName="name"
+               [ngClass]="{'is-invalid': (contactForm.get('name').touched ||
+                                          contactForm.get('name').dirty) &&
+                                          !contactForm.get('name').valid }" />      
+        <span class="invalid-feedback" 
+            *ngIf="(contactForm.get('name').touched ||
+            contactForm.get('name').dirty) &&
+            !contactForm.get('name').valid">
+          <span *ngIf="contactForm.get('name').errors?.required">
+            Name field is required.
+          </span>
+          <span *ngIf="contactForm.get('name').errors?.minlength">
+            The name should be at least 5 letter.
+          </span>
+          <span *ngIf="contactForm.get('name').errors?.maxlength">
+            The name should be 10 letters as maximum.
+          </span>
+          <span *ngIf="contactForm.get('name').errors?.number">
+            The name should not contain number characters.
+          </span>
+          <span *ngIf="contactForm.get('name').errors?.specialCharacter">
+            The name should not contain special characters.
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class='form-group row'>
+      <div class='col-7'>
+        <label class="field-name">LASTNAME:</label>
+        <input class="form-control"
+               id="lastname"                  
+               type="text"
+               placeholder="Type your last name"
+               formControlName="lastName"
+               [ngClass]="{'is-invalid': (contactForm.get('lastName').touched ||
+                                          contactForm.get('lastName').dirty) &&
+                                          !contactForm.get('lastName').valid }" />      
+        <span class="invalid-feedback" 
+            *ngIf="(contactForm.get('lastName').touched ||
+            contactForm.get('lastName').dirty) &&
+            !contactForm.get('lastName').valid">
+          <span *ngIf="contactForm.get('lastName').errors?.required">
+            Lastname field is required.
+          </span>
+          <span *ngIf="contactForm.get('lastName').errors?.minlength">
+            The lastname should be at least 3 letter.
+          </span>
+          <span *ngIf="contactForm.get('lastName').errors?.maxlength">
+            The lastname should be 10 letters as maximum.
+          </span>
+          <span *ngIf="contactForm.get('lastName').errors?.number">
+            The lastname should not contain number characters.
+          </span>
+          <span *ngIf="contactForm.get('lastName').errors?.specialCharacter">
+            The lastname should not contain special characters.
+          </span>     
+        </span>        
+      </div>
+    </div>
+
+    <div class='row form-group'>
+      <div class='col-7'>
+        <label class="field-name">ID:</label>
+        <input class="form-control"
+                id="id"                  
+                type="text"
+                placeholder="Type your ID Numeber"
+                formControlName="id"
+                [ngClass]="{'is-invalid': (contactForm.get('id').touched ||
+                                          contactForm.get('id').dirty) &&
+                                          !contactForm.get('id').valid }" />      
+        <span class="invalid-feedback" 
+            *ngIf="(contactForm.get('id').touched ||
+            contactForm.get('id').dirty) &&
+            !contactForm.get('id').valid">
+          <span *ngIf="contactForm.get('id').errors?.required">
+            ID Number is required.
+          </span>         
+        </span>
+      </div>
+    </div>    
+
+    <div class='form-group row'>
+      <div class='col-7'>
+          <label class="field-name">PHONE:</label>
+          <input class="form-control"
+                  id="phone"                  
+                  type="text"
+                  placeholder="Type your phone number"
+                  formControlName="phone" />        
+        </div>
+    </div>
+
+    <div class='row form-group'>
+        <div class='col-7'>
+          <label class="field-name">EMAIL:</label>
+          <input class="form-control"
+                  id="email"                  
+                  type="text"
+                  placeholder="Type your email"
+                  formControlName="email"
+                  [ngClass]="{'is-invalid': (contactForm.get('email').touched ||
+                                            contactForm.get('email').dirty) &&
+                                            !contactForm.get('email').valid }" />      
+          <span class="invalid-feedback" 
+              *ngIf="(contactForm.get('email').touched ||
+              contactForm.get('email').dirty) &&
+              !contactForm.get('email').valid">
+            <span *ngIf="contactForm.get('email').errors?.required">
+              Email is required
+            </span>              
+            <span *ngIf="contactForm.get('email').errors?.email">
+              Please enter a valid email
+            </span>         
+          </span>
+        </div>
+      </div>      
+
+    <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+            <button class="btn btn-outline-secondary cancel-button"
+            type="button"
+            (click)="goContactList()">
+              Cancel
+              <i class="fas fa-times-circle"></i>
+            </button>          
+          <button class="btn btn-primary save-button"
+                  type="submit"
+                  [disabled]="!contactForm.valid">
+            Add Contact
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </div>
+      </div>
+
+  </form>
+    
+</div>

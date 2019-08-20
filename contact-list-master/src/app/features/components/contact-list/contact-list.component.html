@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header row">
+    <div class="col-9">      
+      <h1>
+        <img src="assets/img/ic-silverback.png"/>
+        CONTACTS
+      </h1>
+    </div>
+    <div class="col-3">
+      <button [routerLink]="['/createContact']" class="btn float-right">
+        ADD CONTACT
+        <i class="fas fa-plus-circle"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card-columns">
+    <app-contact *ngFor='let contact of contacts'
+      [contact]='contact'
+      (contactsListChanged)='contactsListChanged($event)'>
+    </app-contact>    
+  </div>
+
+</div>

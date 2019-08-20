@@ -1,0 +1,23 @@
+<div class="card">  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1 left-contact-bar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="col-10">
+        <p class="id">ID: {{ contact.id }}</p>
+        <p class="name">{{ contact.name | firstUpperCaseLetter }}</p>
+        <p class="lastname">{{ contact.lastName | firstUpperCaseLetter }}</p>
+        <div class="row contact-options">
+          <div class="delete-icon-wrapper col-6" (click)='deleteContact(contact.id)'>
+            <i class="far fa-trash-alt delete-icon"></i> DELETE CONTACT
+          </div>
+          <div class="col-4"></div>
+          <div class="go-to-icon-wrapper col-2">
+            <i [routerLink]="['/contacts', contact.id]" class="col-2 far fa-arrow-alt-circle-right show-icon pull-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

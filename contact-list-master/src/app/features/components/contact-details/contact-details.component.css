@@ -1,0 +1,23 @@
+.contact-details .card {
+  width: 100%
+}
+
+.contact-details .card-header {
+  background-color: seagreen;
+}
+
+.contact-details .card-header i, .contact-details .card-header p,  .contact-details .card-header span{
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.field-name {  
+  color: #32bf8a;
+  margin: 0;
+  font-family: OpenSans-Bold;
+}
+
+.field-value {
+  font-size: 20px;
+}

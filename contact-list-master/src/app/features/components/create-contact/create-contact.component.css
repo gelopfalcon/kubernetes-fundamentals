@@ -1,0 +1,22 @@
+label {
+  color: white;
+  font-family: OpenSans-Regular;
+}
+
+button {
+  color: white;
+  margin-right: 5px;
+}
+
+.save-button {
+  background-color: #35608e;
+}
+
+.cancel-button {
+  background-color: gray;
+}
+
+.invalid-feedback {
+  display: inline;
+  color: #960927;
+}
