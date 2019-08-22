@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://localhost:8181/contacts'
+  apiURL: 'http://35.226.210.93:8181/contacts'
 };
 
 /*

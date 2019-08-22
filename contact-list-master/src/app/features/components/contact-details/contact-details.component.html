@@ -3,7 +3,7 @@
     <div class="col-9">      
       <h1>
         <img src="assets/img/ic-silverback.png"/>
-        CONTACT DETAILS
+        DETALLES DEL CONTACTO
       </h1>
     </div>
   </div>  
@@ -19,21 +19,21 @@
         <div class='row'>
             <div class="col-7"></div>
             <div class="delete-icon-wrapper col-2 pull-right" (click)='deleteContact(contact.id)'>
-              <i class="far fa-trash-alt delete-icon"></i> DELETE CONTACT
+              <i class="far fa-trash-alt delete-icon"></i> BORRAR CONTACTO
             </div>
             <div [routerLink]="['/contacts']" class="go-to-icon-wrapper col-3 pull-right">
-                <i class="far fa-arrow-alt-circle-left show-icon"></i> GO TO CONTACT LIST
+                <i class="far fa-arrow-alt-circle-left show-icon"></i> IR A LA LISTA
             </div>                
         </div>
         <div class='row'>
           <div class='col-4'>
-            <p class="field-name">NAME:</p>
+            <p class="field-name">NOMBRE:</p>
             <p class="field-value">{{ contact.name | firstUpperCaseLetter }} {{ contact.lastName | firstUpperCaseLetter }}</p>
           </div>
         </div>
         <div class='row'>
           <div class='col-4'>
-            <p class="field-name">PHONE:</p>
+            <p class="field-name">TELEFONO:</p>
             <p class="field-value">{{contact.phone}}</p>
           </div>
         </div>

@@ -18,8 +18,8 @@ kind: Deployment
 metadata: 
   name: mongo
 spec:
-  selector:
-    matchLabels:
+  selector: 
+    matchLabels: 
       run: mongo
   template:
     metadata:
@@ -31,7 +31,7 @@ spec:
         image: mongo
         ports:
         - containerPort: 27017
----        
+---      
 apiVersion: v1
 kind: Service
 metadata:
@@ -52,9 +52,10 @@ kind: Deployment
 metadata: 
   name: contactbe
 spec:
-  selector:
-    matchLabels:
+  selector: 
+    matchLabels: 
       app: contactbe
+  replicas: 2 # tells deployment to run 2 pods matching the template 
   template:
     metadata:
       labels:

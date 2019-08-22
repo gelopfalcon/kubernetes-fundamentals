@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #41a07c;
+  background-color:#3cba54;
   font-family: OpenSans-Light;
 }
 
@@ -36,14 +36,14 @@ h1 {
 
 .delete-icon-wrapper {
   font-size: 14px;
-  color: red;
+  color: #db3236;
   padding: 10px 0;
   cursor: pointer;
 }
 
 .go-to-icon-wrapper {
   font-size: 14px;
-  color: #35608e;  
+  color: #4885ed;  
   padding: 10px 0;
   cursor: pointer;  
 }
