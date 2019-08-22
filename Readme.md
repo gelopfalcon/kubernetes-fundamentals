@@ -16,6 +16,7 @@
 - Create an GCP Account. 
 - Download and configure gcloud command -> https://cloud.google.com/sdk/install
 - Initializing Cloud SDK ->  https://cloud.google.com/sdk/docs/initializing
+- Install kubectl (It depends on which OS you use)
 
 ## How to use it
 - Download or clone the project.
