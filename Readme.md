@@ -14,7 +14,7 @@
 - Install Visual Studio (Mac OS / Linux / Windows).
 - Install Docker Desktop. 
 - Create an GCP Account. 
-- Donwload and configure gcloud command -> https://cloud.google.com/sdk/install
+- Download and configure gcloud command -> https://cloud.google.com/sdk/install
 - Initializing Cloud SDK ->  https://cloud.google.com/sdk/docs/initializing
 
 ## How to use it
@@ -29,3 +29,7 @@
                 --machine-type n1-standard-1
 
 - gcloud container clusters get-credentials taller-k8s
+
+- kubectl apply -f kube-deployment.yml
+
+- gcloud container clusters delete taller-k8s  (Optional. It when you want to delete your K8s cluster)
