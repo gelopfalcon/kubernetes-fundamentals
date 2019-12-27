@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh 'kubectl config view'
+                sh 'sudo kubectl config set-context $(kubectl config current-context) --namespace development'
+                sh 'sudo kubectl apply -f  kube-deployment_be.yml'
+            }
+        }
+    }
+}
