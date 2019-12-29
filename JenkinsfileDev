@@ -4,7 +4,7 @@ pipeline {
         stage('Build image') {
          steps {
             withCredentials([usernamePassword(credentialsId: 'docker-registry', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                sh ' echo "$PASSWORD" | sudo docker login --username=$USERNAME --password-stdin'
+                sh ' echo "$PASSWORD" | docker login --username=$USERNAME --password-stdin'
             }
          }   
         }
