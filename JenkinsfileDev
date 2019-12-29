@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-            withCredentials([usernamePassword(credentialsId: 'amazon', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            withCredentials([usernamePassword(credentialsId: 'docker-registry', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             
                 sh 'sudo docker login --username=$USERNAME  --password=$PASSWORD'
             }
