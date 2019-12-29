@@ -3,10 +3,12 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-            withCredentials([usernamePassword(credentialsId: 'docker-registry', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            sh ' cd contact-list-master'
             
-                sh 'sudo docker login --username=$USERNAME  --password=$PASSWORD'
-            }
+              docker.withRegistry('https://registry.hub.docker.com', 'docker-registry') {
+
+                    def customImage = docker.build("my-image:${env.BUILD_ID}")
+              }
  
         }
         }
