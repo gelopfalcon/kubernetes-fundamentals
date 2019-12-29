@@ -3,8 +3,12 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                sh 'docker login --username=glgelopfalcon  --password=boanerges01'
+            withCredentials([usernamePassword(credentialsId: 'amazon', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            
+                sh 'sudo docker login --username=$USERNAME  --password=$PASSWORD'
             }
+ 
+        }
         }
         stage('build') {
             steps {
