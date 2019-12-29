@@ -2,14 +2,12 @@ pipeline {
     agent any
     stages {
         stage('Build image') {
-            steps {
-            sh ' cd contact-list-master'
-            
-              docker.withRegistry('https://registry.hub.docker.com', 'docker-registry') {
+            docker.withRegistry('https://registry.hub.docker.com', 'docker-registry') {
 
                     def customImage = docker.build("my-image:${env.BUILD_ID}")
               }
- 
+            steps {
+            sh 'cd contact-list-master'
         }
         }
         stage('build') {
