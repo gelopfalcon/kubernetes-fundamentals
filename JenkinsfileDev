@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Build image') {
+            steps {
+                sh 'docker login --username=glgelopfalcon  --password=boanerges01'
+            }
+        }
         stage('build') {
             steps {
                 sh 'kubectl config view'
