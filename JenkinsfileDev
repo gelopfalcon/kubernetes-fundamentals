@@ -6,9 +6,6 @@ pipeline {
 
                     def customImage = docker.build("my-image:${env.BUILD_ID}")
               }
-            steps {
-            sh 'cd contact-list-master'
-        }
         }
         stage('build') {
             steps {
