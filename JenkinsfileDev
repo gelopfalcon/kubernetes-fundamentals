@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build project') {
          steps {
-          sh '${env.WORKSPACE}/contact-backend'
+          sh '${pwd()}'
           sh 'ls -l'
          }
         }
