@@ -4,7 +4,7 @@ pipeline {
         stage('Build project') {
          steps {
           sh 'cd ./contact-backend'
-          sh 'gradle test'
+          sh 'ls -l'
          }
         }
         stage('Build image') {
