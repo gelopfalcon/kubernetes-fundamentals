@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('Build project') {
          steps {
-          dir ('subdir') {
+          dir ('contact-backend') {
            sh 'pwd'
+           sh 'ls -l'
           }
-          sh 'ls -l'
+         
          }
         }
         stage('Build image') {
