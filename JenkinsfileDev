@@ -6,6 +6,7 @@ pipeline {
           dir ('contact-backend') {
            sh 'pwd'
            sh 'ls -l'
+           sh 'gradle build'
           }
          
          }
