@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Build project') {
+         steps {
+          sh 'cd ./contact-backend'
+          sh 'gradle test'
+         }
+        }
         stage('Build image') {
          steps {
             withCredentials([usernamePassword(credentialsId: 'docker-registry', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
