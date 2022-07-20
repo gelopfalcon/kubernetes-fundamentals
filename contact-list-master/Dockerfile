@@ -1,4 +1,4 @@
-FROM node:latest as node
+FROM node:16.13.0 as node
 
 ARG ENV=prod
 ARG APP=contact-list
