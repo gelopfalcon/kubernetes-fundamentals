@@ -1,2 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: angular-deployment 
 spec: 
-  replicas: 2
+  selector: 
+    matchLabels: 
+      app: angular 
+  replicas: 2 # tells deployment to run 2 pods matching the template 
+  template: 
+    metadata: 
+      labels: 
+        app: angular 
+    spec: 
+      containers: 
+      - name: angular 
+        image: glgelopfalcon/my-angular-app:2.0.0 
+        ports: 
+        - containerPort: 80
