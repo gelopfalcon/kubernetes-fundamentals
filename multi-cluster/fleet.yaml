@@ -1,0 +1,25 @@
+namespace: fleet-k3s-example
+targetCustomizations:
+- name: falconshop
+  clusterSelector:
+    matchLabels:
+      customer: falconshop
+  yaml:
+    overlays:
+    - frontend_v1
+
+- name: falconeats
+  clusterSelector:
+    matchLabels:
+      customer: falconeats
+  yaml:
+    overlays:
+    - frontend_v1
+
+- name: falconasa
+  clusterSelector:
+    matchLabels:
+      customer: falconasa
+  yaml:
+    overlays:
+    - frontend_v1
