@@ -1,0 +1,5 @@
+spec:
+  template:
+    spec:
+      containers:
+        image: glgelopfalcon/my-angular-app:1.0.0
