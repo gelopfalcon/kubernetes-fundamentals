@@ -1,4 +1,4 @@
-namespace: fleet-k3s-example
+namespace: falcondemo
 targetCustomizations:
 - name: falconshop
   clusterSelector:
@@ -14,4 +14,4 @@ targetCustomizations:
       customer: falconeats
   yaml:
     overlays:
-    - frontend_v2
+    - frontend_v1
