@@ -1,4 +1,4 @@
-namespace: fleet-k3s-example
+namespace: default
 targetCustomizations:
 - name: falconshop
   clusterSelector:
