@@ -6,11 +6,11 @@ targetCustomizations:
       customer: falconshop
   yaml:
     overlays:
-    - frontend_v1
+    - frontend_v2
 - name: falconeats
   clusterSelector:
     matchLabels:
       customer: falconeats
   yaml:
     overlays:
-    - frontend_v1
+    - frontend_v2
