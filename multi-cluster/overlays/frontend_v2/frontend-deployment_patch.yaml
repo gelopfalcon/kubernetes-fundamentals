@@ -1,10 +1,2 @@
 spec: 
-  template: 
-    spec: 
-      containers: 
-      - name: angular 
-        image: glgelopfalcon/my-angular-app:1.0.0 
-        ports: 
-        - containerPort: 80
-
-
+  replicas: 2
