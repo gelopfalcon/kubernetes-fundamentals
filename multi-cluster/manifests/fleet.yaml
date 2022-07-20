@@ -14,4 +14,4 @@ targetCustomizations:
       customer: falconeats
   yaml:
     overlays:
-    - frontend_v2
+    - frontend_v1
