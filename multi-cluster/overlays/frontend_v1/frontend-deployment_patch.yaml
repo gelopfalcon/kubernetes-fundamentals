@@ -1,1 +1,2 @@
-
+spec: 
+    replicas: 2
