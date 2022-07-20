@@ -7,7 +7,6 @@ targetCustomizations:
   yaml:
     overlays:
     - frontend_v1
-
 - name: falconeats
   clusterSelector:
     matchLabels:
