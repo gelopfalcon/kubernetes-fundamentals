@@ -14,3 +14,11 @@ targetCustomizations:
   yaml:
     overlays:
     - frontend_v1
+    
+- name: falconasa
+  clusterSelector:
+    matchLabels:
+      customer: falconasa
+  yaml:
+    overlays:
+    - frontend_v1
