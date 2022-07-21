@@ -1,4 +1,4 @@
-namespace: falcondemo
+namespace: veritasautomata
 targetCustomizations:
 - name: falconshop
   clusterSelector:
